@@ -1,0 +1,82 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": [
+			"**",
+			"!out",
+			"!dist",
+			"!build",
+			"!node_modules",
+			"!.next",
+			"!bun.lock",
+			"!next-env.d.ts",
+			"!*.geojson"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true,
+		"domains": {
+			"react": "recommended",
+			"next": "all"
+		},
+		"rules": {
+			"recommended": true,
+			"a11y": "off",
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"fix": "safe",
+					"options": {
+						"functions": ["cn", "cva"]
+					}
+				}
+			},
+			"suspicious": {
+				"noUnknownAtRules": "off",
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							":BUN:",
+							":NODE:",
+							["next", "next/**", "react"],
+							":PACKAGE:",
+							["@/**", "/**"],
+							":PATH:"
+						]
+					}
+				}
+			}
+		}
+	}
+}

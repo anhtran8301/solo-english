@@ -1,0 +1,99 @@
+:root {
+	--shadow-background-border: 0 0 0 1px var(--color-background-200);
+	--shadow-border-base: 0 0 0 1px #00000014;
+	--shadow-border-inset: inset 0 0 0 1px #00000014;
+
+	--shadow-raw-small: 0px 2px 2px #0000000a;
+	--shadow-raw-medium: 0px 2px 2px #0000000a, 0px 8px 8px -8px #0000000a;
+	--shadow-raw-large: 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a;
+	--shadow-raw-tooltip: 0px 1px 1px #00000005, 0px 4px 8px #0000000a;
+	--shadow-raw-menu:
+		0px 1px 1px #00000005, 0px 4px 8px -4px #0000000a, 0px 16px 24px -8px #0000000f;
+	--shadow-raw-modal:
+		0px 1px 1px #00000005, 0px 8px 16px -4px #0000000a, 0px 24px 32px -8px #0000000f;
+}
+
+/* Dark mode */
+.dark {
+	--shadow-border-base: 0 0 0 1px #ffffff25;
+	--shadow-border-inset: inset 0 0 0 1px #ffffff1a;
+
+	--shadow-raw-small: 0px 1px 2px #00000029;
+	--shadow-raw-medium: 0px 2px 2px #00000052, 0px 8px 8px -8px #00000029;
+	--shadow-raw-large: 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a;
+	--shadow-raw-tooltip: 0px 1px 1px #00000005, 0px 4px 8px #0000000a;
+	--shadow-raw-menu:
+		0px 1px 1px #00000005, 0px 4px 8px -4px #0000000a, 0px 16px 24px -8px #0000000f;
+	--shadow-raw-modal:
+		0px 1px 1px #00000005, 0px 8px 16px -4px #0000000a, 0px 24px 32px -8px #0000000f;
+}
+
+/* Shadows */
+@theme inline {
+	/* Pure shadows */
+	--shadow-small: var(--shadow-raw-small);
+	--shadow-medium: var(--shadow-raw-medium);
+	--shadow-large: var(--shadow-raw-large);
+
+	/* Border only */
+	--shadow-border: var(--shadow-border-base), var(--shadow-background-border);
+
+	/* Shadows with border */
+	--shadow-border-small:
+		var(--shadow-border-base), var(--shadow-raw-small), var(--shadow-background-border);
+	--shadow-border-medium:
+		var(--shadow-border-base), var(--shadow-raw-medium), var(--shadow-background-border);
+	--shadow-border-large:
+		var(--shadow-border-base), var(--shadow-raw-large), var(--shadow-background-border);
+
+	/* Special shadows (all include border) */
+	--shadow-tooltip:
+		var(--shadow-border-base), var(--shadow-raw-tooltip), var(--shadow-background-border);
+	--shadow-menu: var(--shadow-border-base), var(--shadow-raw-menu), var(--shadow-background-border);
+	--shadow-modal:
+		var(--shadow-border-base), var(--shadow-raw-modal), var(--shadow-background-border);
+	--shadow-fullscreen:
+		var(--shadow-border-base), var(--shadow-raw-modal), var(--shadow-background-border);
+}
+
+/* Materials */
+
+@utility material-base {
+	@apply bg-background-100 rounded-sm;
+	box-shadow: var(--shadow-border);
+}
+
+@utility material-small {
+	@apply bg-background-100 rounded-sm;
+	box-shadow: var(--shadow-border-small);
+}
+
+@utility material-medium {
+	@apply bg-background-100 rounded-[12px];
+	box-shadow: var(--shadow-border-medium);
+}
+
+@utility material-large {
+	@apply bg-background-100 rounded-[12px];
+	box-shadow: var(--shadow-border-large);
+}
+
+@utility material-tooltip {
+	@apply bg-background-100 rounded-sm;
+	box-shadow: var(--shadow-tooltip);
+}
+
+@utility material-menu {
+	@apply bg-background-100 rounded-[12px];
+	box-shadow: var(--shadow-menu);
+}
+
+@utility material-modal {
+	@apply bg-background-100 rounded-[12px];
+	box-shadow: var(--shadow-modal);
+}
+
+@utility material-fullscreen {
+	@apply bg-background-100 rounded-2xl;
+	box-shadow: var(--shadow-fullscreen);
+}
