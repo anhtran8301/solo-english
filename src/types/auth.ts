@@ -1,7 +1,8 @@
-import type { BaseEntity } from "./api";
-
-export type User = Pick<BaseEntity, "id" | "createdAt" | "updatedAt"> & {
+export type User = {
+	id: string;
 	name: string;
 	email: string;
-	isActive: boolean;
+	image?: string | null;
+	timezone: string;
+	createdAt: string;
 };

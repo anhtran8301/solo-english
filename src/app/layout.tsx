@@ -1,21 +1,32 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata, Viewport } from "next";
+import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { SiteShell } from "@/features/shell/site-shell";
 import { ReactQueryProvider } from "@/providers/react-query";
 
+const geist = Geist({
+	subsets: ["latin", "vietnamese"],
+	variable: "--font-geist",
+	display: "swap",
+});
 export const metadata: Metadata = {
-	title: "Starter App",
-	description: "A maintainable application starter",
+	title: { default: "Solo English", template: "%s | Solo English" },
+	description: "Tự tạo bài học. Học ngắn mỗi ngày. Nhớ tiếng Anh lâu hơn.",
 };
-
+export const viewport: Viewport = {
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "#f5f5f7" },
+		{ media: "(prefers-color-scheme: dark)", color: "#171719" },
+	],
+};
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className="min-h-screen bg-background text-foreground antialiased">
+		<html lang="vi" suppressHydrationWarning>
+			<body className={geist.variable}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
@@ -24,20 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				>
 					<ReactQueryProvider>
 						<TooltipProvider>
-							<header className="border-b">
-								<nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-									<Link href="/" className="font-semibold">
-										Starter
-									</Link>
-									<div className="flex gap-4 text-sm">
-										<Link href="/login">Sign in</Link>
-										<Link href="/account">Account</Link>
-									</div>
-								</nav>
-							</header>
-							<main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-5xl items-center justify-center px-6 py-12">
-								{children}
-							</main>
+							<SiteShell>{children}</SiteShell>
 							<Toaster />
 						</TooltipProvider>
 					</ReactQueryProvider>

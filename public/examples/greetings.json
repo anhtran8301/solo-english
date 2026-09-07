@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "lesson": {
+    "title": "Chào hỏi mỗi ngày",
+    "description": "Từ lời chào đầu tiên đến một lời xin lỗi chân thành.",
+    "knowledgeItems": [
+      {
+        "term": "hello",
+        "meaning": "xin chào",
+        "type": "VOCABULARY",
+        "questions": [
+          {
+            "stage": "LEARN",
+            "type": "SINGLE_CHOICE",
+            "prompt": "\"hello\" có nghĩa là gì?",
+            "options": [
+              {
+                "text": "xin chào",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "tạm biệt",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "cảm ơn",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "xin lỗi",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "LEARN",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Chọn cách hiểu đúng của \"hello\".",
+            "options": [
+              {
+                "text": "tạm biệt",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "xin chào",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "cảm ơn",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "xin lỗi",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "USE",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Bạn gặp một đồng nghiệp mới. ___, my name is An.",
+            "options": [
+              {
+                "text": "hello",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "thank you",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "USE",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Trong tình huống sau, chọn cách nói phù hợp: Bạn gặp một đồng nghiệp mới. ___, my name is An.",
+            "options": [
+              {
+                "text": "goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "hello",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "thank you",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "RECALL",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Từ nào dùng để chào một người?",
+            "options": [
+              {
+                "text": "hello",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "thank you",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "RECALL",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Cách diễn đạt nào có nghĩa \"xin chào\"?",
+            "options": [
+              {
+                "text": "goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "hello",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "thank you",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "EXPAND",
+            "type": "MULTIPLE_CHOICE",
+            "prompt": "Những cách nào cũng dùng để chào hỏi?",
+            "options": [
+              {
+                "text": "Hi",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Hey",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "EXPAND",
+            "type": "MULTIPLE_CHOICE",
+            "prompt": "Những cách nào cũng dùng để chào hỏi? Chọn hai đáp án.",
+            "options": [
+              {
+                "text": "Goodbye",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Hi",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Sorry",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Hey",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "term": "Nice to meet you.",
+        "meaning": "Rất vui được gặp bạn.",
+        "type": "PHRASE",
+        "questions": [
+          {
+            "stage": "LEARN",
+            "type": "SINGLE_CHOICE",
+            "prompt": "\"Nice to meet you.\" có nghĩa là gì?",
+            "options": [
+              {
+                "text": "Rất vui được gặp bạn.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Hẹn gặp lại.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Tôi xin lỗi.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Chúc ngủ ngon.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "LEARN",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Chọn cách hiểu đúng của \"Nice to meet you.\".",
+            "options": [
+              {
+                "text": "Hẹn gặp lại.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Rất vui được gặp bạn.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Tôi xin lỗi.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Chúc ngủ ngon.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "USE",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Bạn vừa được giới thiệu với một người mới. Bạn nói gì?",
+            "options": [
+              {
+                "text": "Nice to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "See you later.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "I am sorry.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Good night.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "USE",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Trong tình huống sau, chọn cách nói phù hợp: Bạn vừa được giới thiệu với một người mới. Bạn nói gì?",
+            "options": [
+              {
+                "text": "See you later.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Nice to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "I am sorry.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Good night.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "RECALL",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Câu nào thể hiện sự vui mừng khi lần đầu gặp ai đó?",
+            "options": [
+              {
+                "text": "Nice to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "See you later.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "I am sorry.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Good night.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "RECALL",
+            "type": "SINGLE_CHOICE",
+            "prompt": "Cách diễn đạt nào có nghĩa \"Rất vui được gặp bạn.\"?",
+            "options": [
+              {
+                "text": "See you later.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "I am sorry.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Nice to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Good night.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "EXPAND",
+            "type": "MULTIPLE_CHOICE",
+            "prompt": "Cách diễn đạt nào dùng khi vui mừng được gặp ai đó?",
+            "options": [
+              {
+                "text": "Pleased to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "It is great to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "Please leave.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "I cannot hear you.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              }
+            ]
+          },
+          {
+            "stage": "EXPAND",
+            "type": "MULTIPLE_CHOICE",
+            "prompt": "Cách diễn đạt nào dùng khi vui mừng được gặp ai đó? Chọn hai đáp án.",
+            "options": [
+              {
+                "text": "Please leave.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "Pleased to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              },
+              {
+                "text": "I cannot hear you.",
+                "correct": false,
+                "explanation": "Có nghĩa hoặc cách dùng khác với ngữ cảnh đang hỏi."
+              },
+              {
+                "text": "It is great to meet you.",
+                "correct": true,
+                "explanation": "Phù hợp với nghĩa và ngữ cảnh của câu hỏi."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

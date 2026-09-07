@@ -1,31 +1,87 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { AuthGuard, authApi, useAuth } from "@/features/auth";
+import { authApi, useAuth } from "@/features/auth";
+import { initials } from "@/features/auth/initials";
+import { ProfileForms } from "@/features/auth/profile-forms";
+import { ErrorText, PageHeading, useAction } from "@/features/learning/shared";
+import { ThemeSelect } from "@/features/shell/site-shell";
 export default function AccountPage() {
-	const auth = useAuth();
-	const router = useRouter();
+	const auth = useAuth(),
+		router = useRouter();
+	const [error, setError] = useState<Error | null>(null),
+		[busy, setBusy] = useState(false);
+	const preferences = useAction("auth/me", "PATCH", () => {
+		void auth.refetch();
+	});
 	return (
-		<AuthGuard>
-			<section className="w-full max-w-md space-y-4 rounded-xl border p-6">
-				<h1 className="font-semibold text-2xl">Account</h1>
-				<dl className="grid grid-cols-[auto_1fr] gap-3 text-sm">
-					<dt className="text-muted-foreground">Name</dt>
-					<dd>{auth.user?.name}</dd>
-					<dt className="text-muted-foreground">Email</dt>
+		<>
+			<PageHeading title="Tài khoản của bạn" description="Không gian tự học mang tên bạn." />
+			<section className="panel account-panel stack">
+				<div className="account-avatar">{initials(auth.user?.name || "")}</div>
+				<h2>{auth.user?.name}</h2>
+				<dl className="account-details">
+					<dt>Email</dt>
 					<dd>{auth.user?.email}</dd>
+					<dt>Múi giờ học</dt>
+					<dd>{auth.user?.timezone}</dd>
 				</dl>
-				<Button
-					variant="outline"
-					onClick={async () => {
-						await authApi.logout();
-						auth.clear();
-						router.replace("/");
+				<ThemeSelect />
+				<form
+					className="stack"
+					onSubmit={(e) => {
+						e.preventDefault();
+						preferences.mutate({ timezone: new FormData(e.currentTarget).get("timezone") });
 					}}
 				>
-					Sign out
+					<label>
+						Múi giờ thống kê
+						<input
+							name="timezone"
+							required
+							defaultValue={auth.user?.timezone || "Asia/Ho_Chi_Minh"}
+							list="timezones"
+						/>
+					</label>
+					<datalist id="timezones">
+						{[
+							"Asia/Ho_Chi_Minh",
+							"Asia/Tokyo",
+							"Europe/London",
+							"America/New_York",
+							"Australia/Sydney",
+							"UTC",
+						].map((zone) => (
+							<option key={zone} value={zone} />
+						))}
+					</datalist>
+					<Button type="submit" disabled={preferences.isPending}>
+						Lưu múi giờ
+					</Button>
+					<ErrorText error={preferences.error} />
+					{preferences.isSuccess ? <p role="status">Đã cập nhật múi giờ.</p> : null}
+				</form>
+				<ErrorText error={error} />
+				<Button
+					variant="outline"
+					disabled={busy}
+					onClick={async () => {
+						setBusy(true);
+						try {
+							await authApi.logout();
+							await auth.clear();
+							router.replace("/");
+						} catch (e) {
+							setError(e as Error);
+							setBusy(false);
+						}
+					}}
+				>
+					{busy ? "Đang đăng xuất…" : "Đăng xuất"}
 				</Button>
 			</section>
-		</AuthGuard>
+			<ProfileForms />
+		</>
 	);
 }
